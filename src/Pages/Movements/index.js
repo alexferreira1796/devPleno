@@ -192,6 +192,12 @@ const Movements = ({ match }) => {
                  <p>
                    <strong>Entrada:</strong> { dataMonths.data.entradas > 0 ? `R$ ${dataMonths.data.entradas}` : 0 } / <strong>Saída:</strong> { dataMonths.data.saidas !== null && dataMonths.data.saidas !== 0 ? `R$ ${dataMonths.data.saidas}` : 0 }
                  </p>
+                 {
+                   dataMonths.data.entradas &&  dataMonths.data.saidas &&
+                   <p>
+                     <strong>Total:</strong> R$ {dataMonths.data.entradas - ( - dataMonths.data.saidas )}
+                   </p>
+                 }
                </>
             }
             <div className="row mg-top20">
